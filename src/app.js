@@ -7,6 +7,7 @@ const forefunc = require('./utils/forecast')
 const codes = require('./utils/codes')
 
 const app = express()
+const port = process.env.PORT || 3000
 
 // Paths for express config
 const publicDirectoryPath = path.join(__dirname, '../public')
@@ -124,6 +125,6 @@ app.get('/weather', (req, res) => {
 })
 
 
-app.listen(3000, () => {
-    console.log('Server is up on Port 3000!')
+app.listen(port, () => {
+    console.log('Server is up on Port '+port)
 })
