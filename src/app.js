@@ -70,7 +70,7 @@ app.get('/weather', (req, res) => {
                         const weathercode = response.weathercode
                         console.log(weathercode, codes.get(weathercode))
                         res.send({
-                            temperature: 'It is currently '+response.temperature+'C outside',
+                            temperature: 'It is currently '+response.temperature+' degrees outside.',
                             forecast: 'Weather is expected ' + codes.get(weathercode) + ' today',
                             windspeed: response.windspeed,
                             location: location
